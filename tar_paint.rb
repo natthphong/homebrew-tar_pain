@@ -7,10 +7,11 @@ class TarPaint < Formula
   sha256 "5571b88d5e27f388ef88cf898fc346726b141fadab137bd28ee5c97cd4e753d0"
 
   depends_on "python@3.9"
-  depends_on "tcl-tk"
+
 
   def install
     virtualenv_install_with_resources
+    system "pip3", "install", "tk"
     bin.install_symlink libexec/"bin/tar_paint"
   end
 
