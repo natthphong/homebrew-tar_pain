@@ -12,7 +12,6 @@ class TarPaint < Formula
   def install
     virtualenv_install_with_resources
     bin.install_symlink libexec/"bin/tar_paint"
-    (prefix/"Applications").install libexec/"bin/tar_paint"
   end
 
   test do
